@@ -45,7 +45,7 @@ html, body {
   align-items: center;
   width: 100%;
   height: 100%;
-  filter: blur(1px) brightness(300%);
+  filter: blur(1px) brightness(100);
   mix-blend-mode: screen;
 }
 .view-dot .view-blender .r, .view-dot .view-blender .g, .view-dot .view-blender .b {
@@ -60,11 +60,11 @@ html, body {
 .view-dot.COLORED .r {
   background: #f00;
   transform: translateY(-0.5px);
-  flex-grow: 0;
+  flex-grow: 2;
 }
 .view-dot.COLORED .g {
   background: #0f0;
-  flex-grow: 2;
+  flex-grow: 0;
 }
 .view-dot.COLORED .b {
   background: #00f;

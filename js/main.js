@@ -3,6 +3,8 @@ $(function() {
     const w = 128;
     const h = 32;
 
+    let isDraw = false;
+
     /**
      * ドットをテーブルに追加
      */
@@ -19,9 +21,16 @@ $(function() {
     )
     
     /**
-     * ホバー時のイベント
+     * ぬる
      */
+    $(window).on("mousedown", () => {
+        isDraw = true;
+    }).on("mouseup", () => {
+        isDraw = false;
+    })
+
     $(".view-dot").hover((e) => {
+        if (!isDraw) return;
         $(e.target).parent().addClass("COLORED");
     }, () => {
         
